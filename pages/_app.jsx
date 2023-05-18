@@ -6,7 +6,7 @@ import "../styles/globals.css";
 // You can also import additional chains from `@thirdweb-dev/chains` and pass them directly.
 const activeChain = "ethereum";
 
-function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }) => {
   return (
     <ThirdwebProvider 
     desiredChainId={activeChain}

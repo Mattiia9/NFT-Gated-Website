@@ -6,7 +6,7 @@ import checkBalance from "../util/checkBalance";
 import styles from "../styles/Home.module.css";
 
 
-export default function Home() {
+const Home = () => {
   const {logout}= useLogout();
 
 return (
@@ -20,6 +20,8 @@ return (
 )
 
 }
+export default Home
+
 
 // Diese Funktion wird immer aufgrufen sobald jemand auf die Webseite geht
 export async function getServerSideProps(context){

@@ -7,14 +7,13 @@ import{
 
 import styles from "../styles/Home.module.css";
 
-export default function Login(){
+const Login = () => {
     const address = useAddress();    
     const connectWithMetamask = useMetamask();
     
     //Login
     const {login} = useLogin();
     const {user} = useUser();
-
 
     return(
     <div className={styles.container}>
@@ -44,3 +43,5 @@ export default function Login(){
 
     );
 };
+
+export default Login
