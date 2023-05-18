@@ -8,7 +8,7 @@ import styles from "../styles/Home.module.css";
 
 export default function Home() {
   const {logout}= useLogout();
-
+// Comment
 return (
   <div className={styles.container}>
     <h1 className={styles.h1}>Restricted Acces Page</h1>
