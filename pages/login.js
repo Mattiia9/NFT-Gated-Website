@@ -7,7 +7,6 @@ import{
 
 import styles from "../styles/Home.module.css";
 
-// test 
 export default function Login(){
     const address = useAddress();    
     const connectWithMetamask = useMetamask();
