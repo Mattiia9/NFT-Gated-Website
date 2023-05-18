@@ -6,6 +6,7 @@ import{
 } from "@thirdweb-dev/react";
 
 import styles from "../styles/Home.module.css";
+import React from "react";
 
 const Login = () => {
     const address = useAddress();    
@@ -33,7 +34,7 @@ const Login = () => {
             <>
             <button className={styles.mainButton}
             style={{width:"fit-content", padding: 16, paddingLeft: 16}}
-            onClick={() => connectWithMetamask()}
+            onClick={() => connectWithMetamask}
             >
             Connect Wallet
             </button>

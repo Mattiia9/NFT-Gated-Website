@@ -1,4 +1,4 @@
-import React from "react";
+import react from "react";
 import { ThirdwebSDK } from "@thirdweb-dev/sdk";
 import { useLogout } from "@thirdweb-dev/react";
 import { getUser } from "../auth.config";
