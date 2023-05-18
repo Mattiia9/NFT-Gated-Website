@@ -25,7 +25,7 @@ export default function Login(){
             <button
                 className={styles.mainButton}
                 style={{width :256}}
-                onClick={login()}
+                onClick={login}
             >
                 Login
             </button>
