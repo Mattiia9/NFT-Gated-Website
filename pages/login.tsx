@@ -13,7 +13,9 @@ const Login = () => {
     const connectWithMetamask = useMetamask();
     
     //Login
-    const {login} = useLogin();
+    const login = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
+        useLogin();
+      };
     const {user} = useUser();
 
     return(

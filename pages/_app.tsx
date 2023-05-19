@@ -14,7 +14,7 @@ const MyApp = ({ Component, pageProps }) => {
       authConfig={{
         authUrl: '/api/auth',
         domain: 'example.org',
-        loginRedirect: '/'
+        loginRedirect: '/',
       }}
     >
       <Component {...pageProps} />
