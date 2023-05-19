@@ -49,7 +49,7 @@ if (!PRIVATE_KEY){
 
 // Einfügen des SDK
 const sdk = ThirdwebSDK.fromPrivateKey(
-  process.env.THIRDWEB_AUTH_PRIVATE_KEY,
+  PRIVATE_KEY,
   "ethereum"
 );
 

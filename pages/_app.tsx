@@ -10,13 +10,13 @@ const activeChain = "ethereum";
 const MyApp = ({ Component, pageProps }) => {
   return (
     <ThirdwebProvider 
-    desiredChainId={activeChain}
+    activeChain={activeChain}
       authConfig={{
         authUrl: '/api/auth',
         domain: 'example.org',
-        loginRedirect: '/',
       }}
     >
+
       <Component {...pageProps} />
     </ThirdwebProvider>
   );
