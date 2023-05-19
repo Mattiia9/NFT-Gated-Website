@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { ThirdwebSDK } from "@thirdweb-dev/sdk";
 import { useLogout } from "@thirdweb-dev/react";
 import { getUser } from "../auth.config";
@@ -6,13 +6,18 @@ import checkBalance from "../util/checkBalance";
 import styles from "../styles/Home.module.css";
 
 
-export default function Home() {
-  const {logout}= useLogout();
+const Home = () => {
+  
+    const logout = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
+    useLogout();
+  };
+  
 
 return (
   <div className={styles.container}>
     <h1 className={styles.h1}>Restricted Acces Page</h1>
     <p className={styles.explain}>Thanks for beeing an NFT Holder</p>
+    
 
     <button className={styles.mainButton} onClick={logout}>Logout</button>
 
@@ -20,6 +25,8 @@ return (
 )
 
 }
+export default Home
+
 
 // Diese Funktion wird immer aufgrufen sobald jemand auf die Webseite geht
 export async function getServerSideProps(context){
@@ -42,9 +49,9 @@ if (!PRIVATE_KEY){
 
 // Einfügen des SDK
 const sdk = ThirdwebSDK.fromPrivateKey(
-  process.env.THIRDWEB_AUTH_PRIVATE_KEY,
+  PRIVATE_KEY,
   "ethereum"
-)
+);
 
 // Überprüft ob der Benutzer das NFT besitzt
 const hasNFT = await checkBalance(sdk, user.address);

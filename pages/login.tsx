@@ -6,15 +6,17 @@ import{
 } from "@thirdweb-dev/react";
 
 import styles from "../styles/Home.module.css";
+import React from "react";
 
-export default function Login(){
+const Login = () => {
     const address = useAddress();    
     const connectWithMetamask = useMetamask();
     
     //Login
-    const {login} = useLogin();
+    const login = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
+        useLogin();
+      };
     const {user} = useUser();
-
 
     return(
     <div className={styles.container}>
@@ -25,7 +27,7 @@ export default function Login(){
             <button
                 className={styles.mainButton}
                 style={{width :256}}
-                onClick={login()}
+                onClick={login}
             >
                 Login
             </button>
@@ -34,7 +36,7 @@ export default function Login(){
             <>
             <button className={styles.mainButton}
             style={{width:"fit-content", padding: 16, paddingLeft: 16}}
-            onClick={() => connectWithMetamask()}
+            onClick={() => connectWithMetamask}
             >
             Connect Wallet
             </button>
@@ -44,3 +46,5 @@ export default function Login(){
 
     );
 };
+
+export default Login
